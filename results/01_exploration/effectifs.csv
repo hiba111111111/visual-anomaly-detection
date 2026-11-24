@@ -1,0 +1,4 @@
+catégorie,train (sain),validation (sain),test normales,test anomalies,taille originale
+bottle,167,42,20,63,900x900
+hazelnut,313,78,40,70,1024x1024
+carpet,224,56,28,89,1024x1024

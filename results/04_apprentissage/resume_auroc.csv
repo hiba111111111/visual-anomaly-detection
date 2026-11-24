@@ -1,0 +1,4 @@
+,bottle,hazelnut,carpet
+"sans modèle (meilleure famille, choisie a posteriori sur le test)",0.986,0.948,0.893
+détecteur retenu v2 (choisi sans vrai défaut),0.99,0.846,0.779
+"meilleure config. de la grille (a posteriori, pour information)",0.99,0.936,0.834

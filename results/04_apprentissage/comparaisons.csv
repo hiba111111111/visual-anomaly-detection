@@ -1,0 +1,34 @@
+catégorie,comparaison,valeur,AUROC test
+bottle,modèle,iforest,0.9674603174603176
+bottle,modèle,ocsvm,0.9896825396825396
+bottle,stratégie,position,0.9896825396825396
+bottle,stratégie,shared,0.9658730158730158
+bottle,caractéristiques,residu_sobel,0.9746031746031746
+bottle,caractéristiques,sans_histogramme,0.9896825396825396
+bottle,caractéristiques,toutes,0.9619047619047619
+bottle,global ORB/SIFT seul,iforest,0.8484126984126983
+bottle,global ORB/SIFT seul,ocsvm,0.9103174603174603
+bottle,combinaison,zones seules,0.9896825396825396
+bottle,combinaison,zones + global,0.9785714285714285
+hazelnut,modèle,iforest,0.5878571428571429
+hazelnut,modèle,ocsvm,0.8460714285714286
+hazelnut,stratégie,position,0.8460714285714286
+hazelnut,stratégie,shared,0.9110714285714285
+hazelnut,caractéristiques,residu_sobel,0.6516071428571428
+hazelnut,caractéristiques,sans_histogramme,0.8460714285714286
+hazelnut,caractéristiques,toutes,0.42535714285714293
+hazelnut,global ORB/SIFT seul,iforest,0.6139285714285715
+hazelnut,global ORB/SIFT seul,ocsvm,0.6560714285714285
+hazelnut,combinaison,zones seules,0.8460714285714286
+hazelnut,combinaison,zones + global,0.8271428571428572
+carpet,modèle,iforest,0.8057784911717496
+carpet,modèle,ocsvm,0.7792937399678973
+carpet,stratégie,position,0.7568218298555377
+carpet,stratégie,shared,0.7792937399678973
+carpet,caractéristiques,residu_sobel,0.7913322632423755
+carpet,caractéristiques,sans_histogramme,0.7792937399678973
+carpet,caractéristiques,toutes,0.7873194221508828
+carpet,global ORB/SIFT seul,iforest,0.44703049759229535
+carpet,global ORB/SIFT seul,ocsvm,0.4486356340288925
+carpet,combinaison,zones seules,0.7792937399678973
+carpet,combinaison,zones + global,0.6745585874799357

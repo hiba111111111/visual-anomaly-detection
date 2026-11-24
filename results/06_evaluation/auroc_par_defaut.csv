@@ -1,0 +1,13 @@
+catégorie,défaut,AUROC
+bottle,broken_large,1.0
+bottle,broken_small,1.0
+bottle,contamination,0.9690476190476189
+hazelnut,crack,0.7680555555555556
+hazelnut,cut,0.6955882352941176
+hazelnut,hole,0.9486111111111112
+hazelnut,print,0.9705882352941176
+carpet,color,0.9172932330827068
+carpet,cut,0.8907563025210083
+carpet,hole,0.6743697478991597
+carpet,metal_contamination,0.6848739495798319
+carpet,thread,0.7199248120300751

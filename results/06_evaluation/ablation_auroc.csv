@@ -1,0 +1,11 @@
+variante,bottle,hazelnut,carpet
+complet (référence),0.989,0.815,0.81
+sans filtre médian,0.98,0.839,0.761
+sans normalisation photométrique,0.99,0.901,0.465
+normalisation globale minmax (au lieu de locale),,,0.709
+sans alignement,0.986,0.789,
+zones 32 px (au lieu de 16),,0.765,
+famille seule : histogramme,0.952,0.713,0.843
+famille seule : residu,0.983,0.701,
+famille seule : sobel,0.976,0.879,0.575
+famille seule : statistiques,0.984,0.794,0.815

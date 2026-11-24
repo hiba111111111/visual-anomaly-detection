@@ -1,0 +1,5 @@
+id,modèle,paramètres,AUROC synthétique (sélection),AUROC test (rapport)
+0,ocsvm,"{'nu': 0.05, 'gamma': 'scale'}",0.7027551020408163,0.4193418940609952
+1,ocsvm,"{'nu': 0.05, 'gamma': 0.02}",0.7163520408163265,0.4486356340288925
+2,ocsvm,"{'nu': 0.05, 'gamma': 0.5}",0.5,0.5
+3,iforest,{'n_estimators': 100},0.6596811224489796,0.44703049759229535

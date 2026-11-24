@@ -1,0 +1,73 @@
+# Configuration du projet - Sujet 16 : Visual Anomaly Detection (MVTec AD)
+
+data:
+  root: data/mvtec            # dossier MVTec AD : <categorie>/train, test, ground_truth
+  categories: [bottle, hazelnut, carpet]
+  val_ratio: 0.2              # part de train/good gardée pour fixer le seuil (aucun défaut utilisé)
+  seed: 42
+
+preprocessing:                # Ch. 2 et Ch. 3
+  image_size: 256             # redimensionnement INTER_AREA (anti-repliement)
+  grayscale: true
+  denoise: median             # choisi au notebook 02-A (meilleur PSNR/SSIM sur bruit impulsionnel)
+  median_ksize: 3             # filtre médian 3x3 (bruit impulsionnel, préserve les contours)
+  normalize: minmax           # choisi au notebook 02-B : supprime le décalage d'éclairage train/test
+  # Choix FINAL par catégorie (option B, étape 8) : pour chaque catégorie, la variante de prétraitement
+  # au meilleur critère SYNTHÉTIQUE hors-pli dans l'ablation (aucun vrai défaut utilisé).
+  normalize_per_category:
+    bottle: none              # critère 0,996 (contre 0,980 avec minmax)
+    hazelnut: none            # critère 0,833 (contre 0,795 avec minmax)
+    carpet: localnorm         # éclairage non uniforme dans le test ; sans normalisation : critère 0,892
+  denoise_per_category:
+    carpet: none              # critère 0,917 (contre 0,900 avec le médian 3x3)
+  clahe_clip: 2.0             # utilisé seulement si normalize: clahe
+  align: true
+  align_method: rotsearch     # choisi au notebook 02-C : ORB+RANSAC échoue entre objets différents
+  no_align_categories: [carpet, grid, leather, tile, wood]   # textures : pas d'alignement
+  otsu_mask: false
+
+features:
+  zone: 32                    # zones de 32x32 pixels...
+  stride: 16                  # ...qui se chevauchent de moitié -> 15x15 = 225 zones (défauts souvent petits, notebook 01)
+  hist_bins: 16               # histogramme d'intensité normalisé par zone
+  use_residual: true          # |I - I_ref| (soustraction d'images, Ch. 2) ; désactivé pour les textures
+  descriptors: [orb, sift]    # descripteurs locaux (Ch. 1) -> sac de mots visuels
+  nfeatures: 500              # points clés max par image
+  bovw_k: 64                  # taille du vocabulaire visuel (K-Means)
+  lowe_ratio: 0.75
+  pca_variance: 0.95
+
+features_per_category:        # réglages propres à une catégorie
+  hazelnut:                   # défauts fins (coupure : 0,8 % de l'image) -> zones plus petites
+    zone: 16                  # 31x31 = 961 zones ; adopté car le critère synthétique hors-pli
+    stride: 8                 # passe de 0,724 à 0,795 (règle fixée avant de voir le test)
+
+model:
+  # Sélection : validation croisée sur TOUTES les images saines (train + val) + anomalies synthétiques
+  # (1 à 5 % de l'image) ; aucun vrai défaut n'est utilisé pour choisir.
+  cv_folds: 5
+  synthetic_per_image: 1
+  zone_strategies: [position, shared]   # un modèle par position de zone / un modèle partagé
+  zone_feature_sets:                    # familles de caractéristiques de zone comparées
+    toutes: all
+    sans_histogramme: [statistiques, sobel, residu]
+    residu_sobel: [residu, sobel]
+  ocsvm:
+    kernel: rbf
+    nu: [0.05]                # 0.05 et 0.1 donnaient des résultats quasi identiques (notebook 04, v1)
+    gamma: [scale, 0.02, 0.5]
+  iforest:
+    n_estimators: [100]       # 225 forêts par position : 300 arbres -> fichier de modèle trop lourd
+  threshold_percentile: 95    # seuil = 95e centile des scores hors-pli des images saines
+                              # -> taux de fausses alarmes visé : 5 % (choix du cahier des charges)
+
+inference:
+  topk_zones: 3               # score image = max(global, moyenne des k zones les plus suspectes)
+  heatmap_interp: bilinear
+  heatmap_sigma: 4            # lissage gaussien de la carte de chaleur (pixels, espace 256x256)
+  zone_z_threshold: 3.0       # binarisation de la carte : z-score de zone > 3 (zones saines ~ N(0,1))
+  min_region_pct: 0.05        # régions plus petites que 0,05 % de l'image ignorées
+
+paths:
+  models: models
+  results: results

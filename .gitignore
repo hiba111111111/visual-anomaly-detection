@@ -1,0 +1,19 @@
+# Environnement Python (se recrée avec : python -m venv .venv puis pip install -r requirements.txt)
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Données MVTec AD (1,5 Go, licence CC BY-NC-SA 4.0) : à télécharger, voir README.md
+data/
+
+# Caches et archives (recalculés ou inutiles pour utiliser le projet)
+models/cache/
+models/archive_v3_avant_optionB/
+
+# Journaux d'entraînement
+results/*log*.txt
+
+# Système
+Thumbs.db
+desktop.ini

@@ -1,0 +1,18 @@
+type,famille,bottle,hazelnut,carpet
+global,orb_appariement,0.77,0.5,0.453
+global,orb_quantification,0.711,0.565,0.504
+global,orb_sac_de_mots,0.891,0.548,0.543
+global,sift_appariement,0.892,0.5,0.5
+global,sift_quantification,0.929,0.738,0.541
+global,sift_sac_de_mots,0.759,0.672,0.408
+global,toutes (globales),0.899,0.643,0.453
+"zone, par position",histogramme,0.943,0.739,0.887
+"zone, par position",residu,0.986,0.524,
+"zone, par position",sobel,0.974,0.818,0.825
+"zone, par position",statistiques,0.979,0.704,0.777
+"zone, par position",toutes (zones),0.954,0.734,0.864
+"zone, partagé",histogramme,0.402,0.785,0.893
+"zone, partagé",residu,0.92,0.864,
+"zone, partagé",sobel,0.422,0.948,0.79
+"zone, partagé",statistiques,0.5,0.875,0.76
+"zone, partagé",toutes (zones),0.678,0.853,0.852

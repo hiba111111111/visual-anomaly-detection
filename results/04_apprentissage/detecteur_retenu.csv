@@ -1,0 +1,4 @@
+catégorie,v1 : AUROC,v1 : sains rejetés,v1 : défauts détectés,v2 : AUROC,v2 : sains rejetés,v2 : défauts détectés,v2 : précision,v2 : rappel,v2 : F1
+bottle,0.959,4/20,61/63,0.99,3/20 (15%),61/63 (97%),0.953,0.968,0.961
+hazelnut,0.684,6/40,32/70,0.846,6/40 (15%),51/70 (73%),0.895,0.729,0.803
+carpet,0.699,14/28,67/89,0.779,1/28 (4%),35/89 (39%),0.972,0.393,0.56

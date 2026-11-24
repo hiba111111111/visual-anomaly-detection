@@ -1,0 +1,4 @@
+,AUROC pixel,IoU moyen (z>3),IoU médian
+bottle,0.954,0.359,0.382
+hazelnut,0.886,0.311,0.328
+carpet,0.771,0.122,0.039

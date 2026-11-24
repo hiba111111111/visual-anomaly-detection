@@ -1,0 +1,14 @@
+catégorie,variante,critère synthétique,AUROC test (rapport),retenue
+bottle,complet (référence),0.98,0.989,
+bottle,sans filtre médian,0.972,0.98,
+bottle,sans normalisation photométrique,0.996,0.99,✔
+bottle,sans alignement,0.97,0.986,
+hazelnut,complet (référence),0.795,0.815,
+hazelnut,sans filtre médian,0.829,0.839,
+hazelnut,sans normalisation photométrique,0.833,0.901,✔
+hazelnut,sans alignement,0.795,0.789,
+hazelnut,zones 32 px (au lieu de 16),0.724,0.765,
+carpet,complet (référence),0.9,0.81,
+carpet,sans filtre médian,0.917,0.761,✔
+carpet,sans normalisation photométrique,0.892,0.465,
+carpet,normalisation globale minmax (au lieu de locale),0.738,0.709,

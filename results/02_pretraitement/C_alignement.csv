@@ -1,0 +1,9 @@
+catégorie,méthode,NCC val,NCC test sain,écart-type moyen (val),part ORB réussi,part rotsearch,temps / image (ms),construction réf. (s)
+bottle,none,0.994,0.994,7.582,0.0,0.0,0.0,0.113
+bottle,orb,0.994,0.994,7.415,0.21,0.0,5.23,4.258
+bottle,rotsearch,0.996,0.995,6.236,0.0,1.0,12.969,5.058
+bottle,orb+rotsearch,0.996,0.995,6.226,0.677,0.323,13.684,5.816
+hazelnut,none,0.913,0.93,21.945,0.0,0.0,0.172,0.232
+hazelnut,orb,0.913,0.93,21.945,0.0,0.0,3.345,5.359
+hazelnut,rotsearch,0.927,0.946,20.983,0.0,1.0,32.677,18.285
+hazelnut,orb+rotsearch,0.927,0.946,20.978,0.0,1.0,37.02,22.813

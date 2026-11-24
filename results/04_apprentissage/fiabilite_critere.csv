@@ -1,0 +1,4 @@
+catégorie,v1 : meilleur critère,v1 : zone max sur défaut,v2 : critère min-max,v2 : zone max sur défaut (config retenue),v2 : corrélation critère / test (Spearman)
+bottle,0.966,94%,0.84 – 1.00,99%,0.75
+hazelnut,0.545,20%,0.72 – 0.89,85%,0.03
+carpet,0.589,21%,0.55 – 0.96,95%,-0.21

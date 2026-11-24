@@ -1,0 +1,4 @@
+,défauts détectés,sains rejetés,AUROC,AP,précision,rappel,F1,exactitude,taux fausses alarmes,rappel @5% FA,rappel @10% FA,rappel @20% FA
+bottle,61/63,3/20,0.99,0.997,0.953,0.968,0.961,0.94,0.15,0.952,0.968,0.968
+hazelnut,51/70,6/40,0.846,0.914,0.895,0.729,0.803,0.773,0.15,0.629,0.714,0.8
+carpet,35/89,1/28,0.779,0.923,0.972,0.393,0.56,0.53,0.036,0.528,0.528,0.539

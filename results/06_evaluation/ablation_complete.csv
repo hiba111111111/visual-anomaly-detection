@@ -1,0 +1,25 @@
+catégorie,variante,AUROC synthétique,AUROC test,F1,taux fausses alarmes,rappel,rappel @10% FA,configuration,temps (s),Δ AUROC
+bottle,complet (référence),0.98,0.989,0.968,0.1,0.968,0.968,"sans_histogramme | position | ocsvm(nu=0.05, gamma=0.02)",9.007,0.0
+bottle,sans filtre médian,0.972,0.98,0.961,0.15,0.968,0.968,"sans_histogramme | position | ocsvm(nu=0.05, gamma=0.02)",38.261,-0.009
+bottle,sans normalisation photométrique,0.996,0.99,0.961,0.15,0.968,0.968,"sans_histogramme | position | ocsvm(nu=0.05, gamma=0.02)",37.946,0.001
+bottle,sans alignement,0.97,0.986,0.96,0.1,0.952,0.952,"sans_histogramme | position | ocsvm(nu=0.05, gamma=0.02)",28.018,-0.003
+bottle,famille seule : histogramme,0.953,0.952,0.922,0.3,0.937,0.921,"famille seule : histogramme | position | ocsvm(nu=0.05, gamma=0.02)",10.039,-0.037
+bottle,famille seule : statistiques,0.982,0.984,0.96,0.1,0.952,0.968,"famille seule : statistiques | position | ocsvm(nu=0.05, gamma=0.02)",9.44,-0.005
+bottle,famille seule : sobel,0.943,0.976,0.945,0.2,0.952,0.937,"famille seule : sobel | position | ocsvm(nu=0.05, gamma=0.02)",9.367,-0.013
+bottle,famille seule : residu,0.955,0.983,0.961,0.15,0.968,0.968,"famille seule : residu | position | ocsvm(nu=0.05, gamma=0.02)",9.567,-0.006
+hazelnut,complet (référence),0.795,0.815,0.382,0.05,0.243,0.457,"toutes | shared | ocsvm(nu=0.05, gamma=0.5)",490.906,0.0
+hazelnut,sans filtre médian,0.829,0.839,0.5,0.05,0.343,0.529,"toutes | shared | ocsvm(nu=0.05, gamma=0.5)",493.3,0.024
+hazelnut,sans normalisation photométrique,0.833,0.901,0.868,0.075,0.8,0.8,"toutes | shared | ocsvm(nu=0.05, gamma=0.5)",270.677,0.087
+hazelnut,sans alignement,0.795,0.789,0.368,0.025,0.229,0.457,"toutes | shared | ocsvm(nu=0.05, gamma=0.5)",522.677,-0.025
+hazelnut,zones 32 px (au lieu de 16),0.724,0.765,0.44,0.025,0.286,0.429,"toutes | shared | ocsvm(nu=0.05, gamma=0.5)",126.95,-0.05
+hazelnut,famille seule : histogramme,0.813,0.713,0.511,0.0,0.343,0.443,"famille seule : histogramme | shared | ocsvm(nu=0.05, gamma=0.5)",247.433,-0.102
+hazelnut,famille seule : statistiques,0.648,0.794,0.329,0.025,0.2,0.543,"famille seule : statistiques | shared | ocsvm(nu=0.05, gamma=0.5)",126.08,-0.02
+hazelnut,famille seule : sobel,0.697,0.879,0.716,0.0,0.557,0.743,"famille seule : sobel | shared | ocsvm(nu=0.05, gamma=0.5)",123.078,0.064
+hazelnut,famille seule : residu,0.588,0.701,0.4,0.05,0.257,0.414,"famille seule : residu | shared | ocsvm(nu=0.05, gamma=0.5)",277.531,-0.114
+carpet,complet (référence),0.9,0.81,0.729,0.0,0.573,0.64,"toutes | position | ocsvm(nu=0.05, gamma=0.02)",15.711,0.0
+carpet,sans filtre médian,0.917,0.761,0.349,0.036,0.213,0.225,"toutes | position | ocsvm(nu=0.05, gamma=0.02)",56.881,-0.049
+carpet,sans normalisation photométrique,0.892,0.465,0.541,0.286,0.404,0.056,"toutes | position | ocsvm(nu=0.05, gamma=0.02)",49.464,-0.346
+carpet,normalisation globale minmax (au lieu de locale),0.738,0.709,0.421,0.036,0.27,0.348,"toutes | position | ocsvm(nu=0.05, gamma=0.02)",16.457,-0.101
+carpet,famille seule : histogramme,0.894,0.843,0.764,0.0,0.618,0.697,"famille seule : histogramme | position | ocsvm(nu=0.05, gamma=0.02)",15.702,0.033
+carpet,famille seule : statistiques,0.901,0.815,0.553,0.0,0.382,0.416,"famille seule : statistiques | position | ocsvm(nu=0.05, gamma=0.02)",14.556,0.004
+carpet,famille seule : sobel,0.642,0.575,0.504,0.214,0.36,0.191,"famille seule : sobel | position | ocsvm(nu=0.05, gamma=0.02)",15.075,-0.235

@@ -1,0 +1,9 @@
+,PSNR,PSNR,PSNR,SSIM,SSIM,SSIM
+bruit,gaussien σ=15,poivre et sel 5 %,sans bruit,gaussien σ=15,poivre et sel 5 %,sans bruit
+filtre,,,,,,
+aucun,24.915,17.698,99.0,0.57,0.444,1.0
+moyenneur 3×3,29.392,24.666,34.513,0.793,0.594,0.906
+gaussien 3×3,29.794,24.5,36.607,0.808,0.606,0.947
+médian 3×3,28.796,34.849,35.695,0.753,0.913,0.918
+médian 5×5,28.618,31.295,31.51,0.672,0.738,0.74
+bilatéral,29.477,17.723,37.424,0.805,0.441,0.969
